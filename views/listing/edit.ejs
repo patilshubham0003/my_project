@@ -1,0 +1,56 @@
+<%- layout("/layout/boilerplate.ejs") %>
+
+    <body>
+        <h1>edit your profile</h1>
+        <form novalidate class="form needs-validation" enctype="multipart/form-data" method="post" action="/listing/edit/<%= data._id %>?_method=PATCH">
+            <div class="row col-8">
+                <div>
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" placeholder="title" value="<%= data.title %>" name="title" class="form-control" required>
+                    <div class="invalid-feedback">
+                        please enter a title
+                    </div>
+                </div>
+                <div>
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="description" required class="form-control" placeholder="description"><%= data.description %></textarea>
+                    <div class="invalid-feedback">
+                        please enter a description
+                    </div>
+                </div>
+                <div class="row col-5 mt-2 mb-2">
+                    original image <br>
+                    <img src="<%= originalUrl %>" alt="listing image">
+                </div>
+                <div>
+                    <label for="image" class="label-control">upload a image</label>
+                    <input type="file" name="image" class="form-control">
+                </div>
+
+                <div class="row">
+                    <div class="col-md-5">
+                        <label for="price" class="label-control">Price</label>
+                        <input type="text" required placeholder="price" class="form-control" name="price" value="<%=data.price%>">
+                        <div class="invalid-feedback">
+                            please enter a price
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <label for="location" class="label-control">Location</label>
+                        <input type="text" placeholder="location" required class="form-control" name="location" value="<%= data.location %>">
+                        <div class="invalid-feedback">
+                            please enter a location
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="country" class="label-control">Country</label>
+                    <input type="text" placeholder="country" required class="form-control" name="country" value="<%= data.country %>">
+                    <div class="invalid-feedback">
+                        please enter a country
+                    </div>
+                </div>
+            </div>
+            <button class="mt-1 mb-1 form-button btn btn-success">Edit</button>
+        </form>
+    </body>

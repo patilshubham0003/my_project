@@ -1,0 +1,118 @@
+/* body {
+    /* background-color: pink; */
+
+
+/* } */
+
+
+/* navbar */
+
+.navbar {
+    height: 5rem;
+    background-color: whitesmoke;
+}
+
+.fa-compass {
+    font-size: 3rem;
+    color: rgb(194, 158, 93);
+}
+
+
+/* footer */
+
+.f-info-links a {
+    text-decoration: none;
+    color: rgb(33, 25, 25);
+    margin-right: 1rem;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info {
+    height: 8rem;
+    background-color: rgb(159, 190, 185);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.f-info-social {
+    font-size: 1.5rem;
+}
+
+
+/* card */
+
+.listing-card {
+    border: none !important;
+    margin: 0.5rem;
+    margin-left: 1rem;
+}
+
+.card-img-top {
+    padding-top: 0.5rem;
+    height: 18rem;
+    border-radius: 1rem;
+}
+
+.card-link {
+    text-decoration: none !important;
+    color: black;
+}
+
+
+/* new  */
+
+.form-button {
+    margin-left: 29%;
+}
+
+.form {
+    margin-left: 25%;
+}
+
+
+/* show */
+
+.show-btns {
+    display: flex;
+    margin: 0.5rem;
+}
+
+.show-delete {
+    margin-left: 1rem;
+}
+
+.card-img-top {
+    height: 45vh;
+    padding: 0.5rem;
+}
+
+.fa-location-dot {
+    color: rgb(139, 139, 26);
+}
+
+.fa-earth-asia {
+    color: blue;
+}
+
+
+/* review */
+
+.review {
+    border: 2px solid black;
+    justify-self: center;
+    border-radius: 1rem;
+}
+
+.review-btn {
+    margin-left: 40%;
+}
+
+.invalid-feedback {
+    font-size: medium;
+}

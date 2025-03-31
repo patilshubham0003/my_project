@@ -1,0 +1,49 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+    <body>
+        <h1 class="mt-2">Add new listing</h1><br><br><br>
+        <form method="post" action="/listing/new" novalidate class="form needs-validation" enctype="multipart/form-data">
+            <div class="row col-8">
+                <div>
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" placeholder="title" name="title" required>
+                    <div class="invalid-feedback">
+                        please enter a title
+                    </div>
+                </div>
+                <div>
+                    <label for="description" class="form-label">Description</label required>
+                    <textarea name="description" class="form-control" placeholder="description" >nice palce</textarea>
+                </div>
+                <div>
+                    <label for="image" class="label-control">Upload Image</label>
+                    <input type="file" name="image" class="form-control" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="price" class="label-control">Price</label>
+                        <input type="text" class="form-control" placeholder="price" value="100" name="price" required>
+                        <div class="invalid-feedback">
+                            please enter a price
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="location" class="label-control">Location</label>
+                        <input type="text" class="form-control" placeholder="location" name="location" required>
+                        <div class="invalid-feedback">
+                            please enter a location
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="country" class="label-control">Country</label>
+                    <input type="text" class="form-control" name="country" placeholder="country" required>
+                    <div class="invalid-feedback">
+                        please enter a country name
+                    </div>
+                </div>
+            </div>
+            <button class="mt-1 mb-1 form-button btn btn-success">Add</button>
+        </form>
+    </body>
