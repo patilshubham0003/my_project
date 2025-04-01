@@ -9,7 +9,11 @@
 
 .navbar {
     height: 5rem;
-    background-color: whitesmoke;
+}
+
+.m-nav {
+    background-color: rgb(222, 228, 231);
+    padding: 10px;
 }
 
 .fa-compass {

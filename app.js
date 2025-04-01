@@ -18,6 +18,7 @@ const userrouter = require("./routes/user.js");
 
 //connectoin with db
 let url = process.env.ATLAS_DBLINK;
+
 async function main() {
     await mongoose.connect(url);
 }
@@ -108,10 +109,16 @@ app.use((req, res, next) => {
     next();
 })
 
+
+
 app.use("/", userrouter);
 app.use("/listing", Listingrouter);
 app.use("/listing/:id/reviews", Reviewsrouter);
 
+
+app.get("/", (req, res) => {
+    res.redirect("/listing")
+})
 
 app.use("*", (req, res, next) => {
     next(new expressError(404, "page not found!!!"));
